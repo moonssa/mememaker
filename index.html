@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
-    <canvas></canvas>
-    <input id="line-width" type="range" min="1" max="10" value="5" step="0.5" />
-    <div>
+<body>   
+    <div class="color-options">
         <input id="palette" type="color" />
         <div class="color-option" style="background-color: #c56cf0" data-color="#c56cf0" ></div>     
         <div class="color-option" style="background-color: #ffb8b8" data-color="#ffb8b8" ></div>     
@@ -21,15 +19,26 @@
         <div class="color-option" style="background-color: #67e6dc" data-color="#67e6dc" ></div>     
         <div class="color-option" style="background-color: #17c0eb" data-color="#17c0eb" ></div>     
         <div class="color-option" style="background-color: #7158e2" data-color="#7158e2" ></div>     
+        <div class="color-option" style="background-color: #4b4b4b" data-color="#4b4b4b" ></div>     
         <div class="color-option" style="background-color: #3d3d3d" data-color="#3d3d3d" ></div>     
     </div>
-    <button id="mode-btn"> Fill</button>
-    <button id="destroy-btn"> Destroy</button>
-    <button id="eraser-btn">Eraser</button>
-    <input type="file" accept="image/*" id="file">
-    <input type="text" placeholder="Write and then double click!!" id="text" />
-    <button id="save">Save Image</button>
+    <canvas></canvas>
+    <div class="btns">
+        <input id="line-width" type="range" min="1" max="10" value="5" step="0.5" />
+        <button id="mode-btn"> 🩸 Fill</button>
+        <button id="destroy-btn"> 💣 Destroy</button>
+        <button id="eraser-btn">❌ Eraser</button>
+        <label for="file">
+            사진 추가하기
+            <input type="file" accept="image/*" id="file">
+        </label>
+        
+        <input type="text" placeholder="Write and then double click!!" id="text" />
+        <button id="save">💾 Save Image</button>
+        <button id="undo">undo</button>
+    </div>
     <script src="app.js"></script>
+       
 
 </body>
 </html>
